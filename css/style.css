@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("../img/background.jpg") 100%;
+}
+
+.content {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+header {
+    padding: 5px 0 5px 0;
+    text-align: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 26px;
+    margin-bottom: 50px;
+    background-color: white;
+    color: maroon;
+    border-radius: 10px;
+    border: 2px solid maroon;
+}
+
+.chip {
+    height: 35px;
+    background-size: 50px;
+    background-position: left;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    text-align: right;
+    padding-left: 45px;
+    width: 35px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+fieldset {
+    font-size: 32px;
+    color: white;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.summary {
+    border-top: 1px solid white;
+    background-color: white;
+    color: maroon;
+    font-size: 22px;
+}
+
+legend {
+    font-size: 18px;
+    margin-left: 5px;
+    text-align: center;
+    background-color: maroon;
+    border-radius: 3px;
+}
+
+.button {
+    width: 150px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    color: maroon;
+    font-size: 26px;
+    border: 2px solid maroon;
+    text-align: center;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 5px;
+}
+
+.button:hover {
+    background-color: maroon;
+    color: white;
+    border: 2px solid white;
+}
+
+#fork {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 149px;
+    height: 149px;
+    background: url('../img/fork_me_on_github.png') no-repeat;
+}
+
+#dealerCardContainer {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 80px;
+    text-align: center;
+    margin-left: auto;
+    visibility: hidden;
+}
+
+#dealerCards {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 141px;
+    height: auto;
+    min-width: 124px;
+    max-width: 141px;
+    -webkit-box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+}
+
+#playerCardContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    text-align: center;
+    z-index: -1;
+    margin-left: 0 auto;
+    visibility: hidden;
+}
+
+#playerCards {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+.card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 141px;
+    height: auto;
+    min-width: 124px;
+    max-width: 141px;
+    -webkit-box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 3px 34px 0px rgba(0, 0, 0, 0.75);
+}
+
+.keys {
+    position: absolute;
+    right: 0;
+    bottom: 33.33%;
+    visibility: hidden;
+}
+
+.keys .button {
+    width: 200px;
+}
+
+#blockscreen, #modalwindow {
+    position: fixed;
+}
+#blockscreen {
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+#modalwindow {
+    z-index: 11;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid maroon;
+    box-shadow: 0 0 10px red;
+    font-size: 24px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+    color: maroon;
+}

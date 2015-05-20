@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="BlackJackApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BlackJack Game</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body ng-controller="BlackJackCtrl">
+    <header>
+        <h1>BlackJack</h1>
+    </header>
+
+    <div class="content">
+        <div id="dealerCardContainer">
+            <div id="dealerCards" style="display: inline-block; width: 181px; height: 197px;">
+                <img src="img/cards/back.png" class="card">
+                <!--<img src="img/cards/heartsJ.png" class="card" style="left: 40px;">-->
+            </div>
+        </div>
+        
+        <div id="playerCardContainer">
+            <div id="playerCards" style="display: inline-block; width: 181px;">
+            </div>
+        </div>
+        
+        <fieldset class="players-money">
+            <legend>Player's money:</legend>
+            <div ng-repeat="chip in playersChips" ng-click="betAdd($index)" class="chip" style="background-image: url('{{chip.img}}')">
+                ×{{chip.num}}
+            </div>
+            <div class="summary">Total: {{playersMoney()}}</div>
+        </fieldset>
+        
+        <fieldset class="players-bet">
+            <legend>Player's bet:</legend>
+            <div ng-repeat="chip in playersBet" ng-click="betSub($index)" class="chip" style="background-image: url('{{chip.img}}')">
+                ×{{chip.num}}
+            </div>
+            <div class="summary">Bet: {{playersBetCalc()}}</div>
+        </fieldset>
+        <div class="button" ng-click="play()">Play!</div>
+
+        <div class="keys">
+            <div class="button" ng-click="hit()">Hit</div>
+            <div class="button" ng-click="stand()">Stand</div>
+            <div class="button" ng-click="doubleDown()">Double down</div>
+        </div>
+
+    </div>
+
+
+    <a id="fork" href="https://github.com/andrii-kuzyk/blackjack" title="Fork me on GitHub"></a>
+
+</body>
+</html>
